@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Login Now">
+    <meta name="description" content="">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="Admin.css" media="screen">
+<link rel="stylesheet" href="Admin-page.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="Admin.js" defer=""></script>
+    <meta name="generator" content="Admin 6.5.3, Admin.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/f598ee10179fe7a47ffea40ce625b21d.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Admin page">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
+    <header class="u-clearfix u-grey-5 u-header u-header" id="sec-4ddd"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+       <div style="display: flex;"> <a href="Admin-page.html" class="u-image u-logo u-image-1" data-image-width="250" data-image-height="400">
+          <img src="images/f598ee10179fe7a47ffea40ce625b21d.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <a href="/logout" class="u-border-2 u-border-active-white u-border-grey-75 u-border-hover-black u-btn u-btn-round u-button-style u-palette-2-base u-radius u-btn-1">Logout</a>      </div>
+          
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+       
+      </div></header>
+    <section class="u-align-left u-clearfix u-section-1" id="carousel_6f04">
+      <img class="u-expanded-width u-image u-image-default u-image-1" src="images/graduates-student-graduation-caps-thrown-600nw-1937758900.webp" alt="" data-image-width="600" data-image-height="399">
+      <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-container-style u-grey-10 u-layout-cell u-shape-round u-size-60 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+              <div class="u-container-layout u-container-layout-1">
+                <h2 class="u-align-left u-text u-text-default u-text-1"> Schedule - UPCOMING COMPANIES! </h2><span class="u-file-icon u-icon u-icon-1"><img src="images/190411.png" alt=""></span><span class="u-file-icon u-icon u-icon-2"><img src="images/190406.png" alt=""></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-expanded u-table u-table-responsive u-table-1">
+        <table class="u-table-entity">
+          <colgroup>
+            <col width="20%">
+            <col width="20%">
+            <col width="15%">
+            <col width="15">
+            <col width="15">
+            <col width="15">
+
+          </colgroup>
+          <tbody class="u-align-center u-table-body">
+            <tr style="height: 74px;">
+              <td class="u-align-center u-border-3 u-border-grey-75 u-first-column u-palette-2-base u-table-cell u-table-cell-1">COPANY NAME </td>
+              <td class="u-align-center u-border-3 u-border-grey-75 u-palette-2-base u-table-cell u-table-cell-2">DATE OF DRIVE </td>
+              <td class="u-align-center u-border-3 u-border-grey-75 u-palette-2-base u-table-cell u-table-cell-3">C.G.P.A required </td>
+              <td class="u-align-center u-border-3 u-border-grey-75 u-palette-2-base u-table-cell u-table-cell-4">Rounds</td>
+              <td class="u-align-center u-border-3 u-border-grey-75 u-palette-2-base u-table-cell u-table-cell-5">Sem</td>
+              <td class="u-align-center u-border-3 u-border-grey-75 u-palette-2-base u-table-cell u-table-cell-6">Opeartions</td>
+           
+            </tr>
+           
+            <% comp.forEach((company)=>{%>
+              <tr style="height: 74px;">
+                <td class="u-align-center u-border-3 u-border-grey-75 u-first-column u-table-cell u-table-cell-5"><%=company.name%> </td>
+                <td class="u-border-3 u-border-grey-75 u-table-cell u-table-cell-7"><%=company.dod%> </td>
+                <td class="u-border-3 u-border-grey-75 u-table-cell u-table-cell-8"><%=company.cgpa%></td>
+                <td class="u-border-3 u-border-grey-75 u-table-cell u-table-cell-9"><%=company.rounds%></td>
+                <td class="u-border-3 u-border-grey-75 u-table-cell u-table-cell-10"><%=company.sem%></td>
+                <td class="u-border-3 u-border-grey-75 u-table-cell u-table-cell-11"> <a href="/deletecomp/<%=company.id%>">Delete</a></td>
+                
+               
+              </tr>
+
+            <%})%>
+          </tbody>
+        </table>
+      </div>
+     
+      <a href="/addcompany" class="u-active-palette-3-base u-align-left u-btn u-button-style u-hover-palette-3-base u-palette-2-base u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-28" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750" data-animation-direction="">Add Companies</a>
+    </section>
+    <section class="u-clearfix u-gradient u-section-2" id="carousel_7497">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default u-text-1">TOP MNCS VISITING EVERY YEAR</h2>
+        <p class="u-align-center u-text u-text-body-alt-color u-text-2">Below mentioned are some of the leading companies visiting for placement every year from our institute! </p>
+        <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-align-center u-container-style u-image u-image-round u-list-item u-radius-20 u-repeater-item u-shading u-image-1" data-image-width="1000" data-image-height="667">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-align-center u-file-icon u-icon u-icon-1"><img src="images/5977595.png" alt=""></span>
+                <h4 class="u-align-center u-text u-text-3">WALMART</h4>
+              </div>
+            </div>
+            <div class="u-container-align-center u-container-style u-image u-image-round u-list-item u-radius-20 u-repeater-item u-shading u-image-2" data-image-width="1400" data-image-height="1050">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-align-center u-file-icon u-icon u-icon-2"><img src="images/11378728.png" alt=""></span>
+                <h4 class="u-align-center u-text u-text-4">AMAZON </h4>
+              </div>
+            </div>
+            <div class="u-container-align-center u-container-style u-image u-image-round u-list-item u-radius-20 u-repeater-item u-shading u-image-3" data-image-width="300" data-image-height="168">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><span class="u-align-center u-file-icon u-icon u-icon-3"><img src="images/2504929.png" alt=""></span>
+                <h4 class="u-align-center u-text u-text-5">NETFLIX </h4>
+              </div>
+            </div>
+            <div class="u-container-align-center u-container-style u-image u-image-round u-list-item u-radius-20 u-repeater-item u-shading u-image-4" data-image-width="1920" data-image-height="1080">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4"><span class="u-align-center u-file-icon u-icon u-icon-4"><img src="images/732096.png" alt=""></span>
+                <h4 class="u-align-center u-text u-text-6">PAYPAL</h4>
+              </div>
+            </div>
+            <div class="u-container-align-center u-container-style u-image u-image-round u-list-item u-radius-20 u-repeater-item u-shading u-image-5" data-image-width="1920" data-image-height="1507">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5"><span class="u-align-center u-file-icon u-icon u-icon-5"><img src="images/281764.png" alt=""></span>
+                <h4 class="u-align-center u-text u-text-7">GOOGLE</h4>
+              </div>
+            </div>
+          </div>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-prev u-hidden-xs u-hover-black u-icon-circle u-opacity u-opacity-70 u-palette-2-base u-spacing-10 u-text-palette-1-dark-3 u-gallery-nav-1" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+          </a>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-next u-hidden-xs u-hover-black u-icon-circle u-opacity u-opacity-70 u-palette-2-base u-spacing-10 u-text-palette-1-dark-3 u-gallery-nav-2" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    
+
+</body></html>
