@@ -229,7 +229,11 @@ app.get('/eligiblity',async(req,res)=>{
     let img=["images/12868721-c6162c9a.png","images/104093-b64f636a.png","images/250561-5adaef27.png","images/732082-e6931f26.png","images/5968594-84343c42.png","images/20837-323562e4.png","images/732096-13d9cafe.png","images/10832242-f1b2c258.png","images/5969096-de950306.png"]
     console.log(req.user)
 let comdata=await company.find({});
+
 let studata=await student.findOne({uid:req.user.id});
+if(!studata){
+   return  res.send("No data exits. Please wait while we add your data")
+}
 console.log(studata.cgpa)
 const booleligible=[];
   for(let i=0 ;i<comdata.length;i++){
