@@ -263,10 +263,10 @@ app.get('/deletecomp/:id',(req,res)=>{
 app.get('/preperation',(req,res)=>{
     res.render('Prepration')
 })
-app.get('/studentinfo',ensureadminauthentication,(req,res)=>{
+app.get('/studentinfo',(req,res)=>{
     
     
-    res.render('Student-info')
+    res.render('Student-Info')
 })
 app.post('/addstudentinfo',(req,res)=>{
     let data={
